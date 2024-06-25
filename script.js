@@ -126,3 +126,21 @@ function fillU(){
         }
     }
 }
+
+function Default() {
+    document.getElementById("grid").innerHTML = "";
+
+    // Create a 2x2 table
+    for (let i = 0; i < 2; i++) {
+        let row = document.createElement("tr");
+        for (let j = 0; j < 2; j++) {
+            let col = document.createElement("td");
+            col.onclick = function() {
+                this.style.backgroundColor = colorSelected;
+            };
+            row.appendChild(col);
+        }
+        document.getElementById("grid").appendChild(row);
+    }
+}
+
